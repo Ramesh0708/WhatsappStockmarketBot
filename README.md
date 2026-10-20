@@ -1,16 +1,26 @@
-# WhatsappStockmarketBot
-Whatsapp stock market bot with Python, Twilio &amp; MarketStack
+# WhatsApp Stock Market Bot
 
-Technologies like whatsapp chatbots with Twilio APIs using Python programming language and Flask micro web framework
- 
-1.Whatsapp chatbot: Learn how to build a conversational chatbot on Whatsapp platform which acts just like your personal finance assistant
+A planned WhatsApp chatbot that acts as a personal finance assistant, using Python, Flask, Twilio and the MarketStack API.
 
-2.Leverage Twilio APIs: Learn how to leverage the powerful Twilio APIs to send messages to the subscribed BOT users
+> **Status:** work in progress. `main.py` is currently empty, so the bot doesn't run yet. The repo has the dependency list and a screenshot.
 
-3.Python programming: Learn to program the backend processing of the messages using Python and integration of Twilio and MarketStack API
+![Chatbot screenshot](Screenshot%20of%20chatbot.png)
 
-4.Flask app running on local machine and using NGROK to create a tunnel to your app from an HTTPS public endpoint
+## Planned design
+- WhatsApp conversations through the Twilio WhatsApp API
+- A Flask app that handles incoming messages, exposed locally over HTTPS with ngrok
+- Stock data from [MarketStack](https://marketstack.com/), which covers 70+ exchanges
 
-5.MarketStack: Learn about the market stack API which provides stock data of 70+ stock exchanges across the world
+## Tech stack
+Python, Flask 1.1, Twilio 6.50, requests (see `requirements.txt`).
 
-Source which i used to build this application : https://www.udemy.com/course/whatsapp-stock-market-bot-with-python-twilio-marketstack/
+## Setup
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+Keep your Twilio and MarketStack credentials in environment variables and never commit them.
+
+## Credits
+Based on the Udemy course [WhatsApp Stock Market Bot with Python, Twilio & MarketStack](https://www.udemy.com/course/whatsapp-stock-market-bot-with-python-twilio-marketstack/).
